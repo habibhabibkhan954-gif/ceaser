@@ -1,34 +1,29 @@
-name: Build Release APK
+Skip to content
+habibhabibkhan954-gif
+ceaser
+Repository navigation
+Code
+Pull requests
+Agents
+Actions
+Projects
+.github/workflows/main.yml
+Update build.yml #4
+Triggered via push 1 minute ago
+@habibhabibkhan954-gifhabibhabibkhan954-gif
+pushed
+ 4a1d6ee
+master
+Status
+Failure
+Total duration
+–
+Artifacts
+–
+This workflow graph cannot be shown
+A graph will be generated the next time this workflow is run.
 
-on:
-  push:
-    branches: [ "main" ]
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-
-    - name: Setup Android SDK
-      uses: android-actions/setup-android@v2
-
-    - name: Build Debug APK (No Keystore Needed)
-      run: |
-        chmod +x ./gradlew
-        ./gradlew assembleDebug
-
-    - name: Upload APK to Install
-      uses: actions/upload-artifact@v3
-      with:
-        name: My-App-APK
-        path: app/build/outputs/apk/debug/*.apk
+Annotations
+1 error
+Invalid workflow file: .github/workflows/main.yml#L26
+You have an error in your yaml syntax on line 26
